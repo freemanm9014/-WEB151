@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+.
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <title>Canvas</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="400" height="400"></canvas>
+
+    <script>
+	// M4LAB_Template
+	// WEB 151
+	// Pg 204
+	
+	
+	// get the canvas
+    var canvas = document.getElementById("canvas");
+	// get the context as 2d
+    var ctx = canvas.getContext("2d");
+	// actually draw
+    
+	// Sky Blue
+	ctx.fillStyle = "#00bfff";
+	ctx.fillRect(10, 10, 60, 100);
+	
+	//  Light Blue
+	ctx.fillStyle = "#00ffff";
+	ctx.fillRect(70, 10, 60, 100);
+	
+	// Blue
+	ctx.fillStyle = "#0040ff";
+	ctx.fillRect(125, 10, 60, 100);
+
+	
+    </script>
+
+
+</body>
+</html>

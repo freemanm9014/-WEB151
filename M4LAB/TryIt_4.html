@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Snowman</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="700" height="700"></canvas>
+
+    <script>
+	
+	// WEB 151
+	// Pg 213
+	
+	
+	// get the canvas
+    var canvas = document.getElementById("canvas");
+	// get the context as 2d
+    var ctx = canvas.getContext("2d");
+	// actually draw
+    
+	var circle = function (x, y, radius) {
+	ctx.beginPath();
+	ctx.arc(x, y, radius, 0, Math.PI * 2, false);
+	ctx.stroke();
+	};
+	
+	ctx.lineWidth = 4
+	circle(100, 50, 20);
+	circle(100, 100, 30);
+	circle(100, 170, 40);
+	circle(90, 50, 5);
+	circle(110, 50, 5);
+	ctx.strokeStyle = "orange"
+	circle(100, 60, 5); // nose
+	
+	ctx.circle(100, 100, 40);
+	ctx.circle(100, 100, 50);
+	ctx.circle(100, 100, 60);
+	
+	
+    </script>
+</body>
+</html>

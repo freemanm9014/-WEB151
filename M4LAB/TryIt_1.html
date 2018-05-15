@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <title>Canvas</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="400" height="400"></canvas>
+
+    <script>
+	// M4LAB_Template
+	// WEB 151
+	// Pg 203
+	
+	
+	// get the canvas
+    var canvas = document.getElementById("canvas");
+	// get the context as 2d
+    var ctx = canvas.getContext("2d");
+	// actually draw
+    //for (var i = 0; i , 8; i++) 
+	
+		//  head
+		ctx.fillRect(60, 50, 60, 50);
+		// neck
+		ctx.fillRect(84,100,10,50)
+		// body
+		ctx.fillRect(44,150,90,100)
+		// left arm
+		ctx.fillRect(44,100,10,50)
+		// right arm
+		ctx.fillRect(124,96,10,58)
+		// left leg
+		ctx.fillRect(44,250,10,80)
+		//right leg
+		ctx.fillRect(124,250,10,80)
+	
+    </script>
+
+
+</body></html>

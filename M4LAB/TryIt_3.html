@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stick Figure</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="600" height="600"></canvas>
+
+    <script>
+	
+	// WEB 151
+	// Pg 207
+	
+	
+	// get the canvas
+    var canvas = document.getElementById("canvas");
+	// get the context as 2d
+    var ctx = canvas.getContext("2d");
+	// actually draw
+    
+	// top left
+	//ctx.fillRect(0, 0, 10, 10);
+		
+		
+		ctx.lineWidth = 4
+		//  head
+		ctx.strokeRect(60, 50, 60, 50);
+		// neck
+		//ctx.fillRect(84,100,10,50)
+		// body
+		//ctx.fillRect(44,150,90,100)
+		// left arm
+		//ctx.fillRect(44,100,10,50)
+		// right arm
+		//ctx.fillRect(124,96,10,58)
+		// left leg
+		//ctx.fillRect(44,250,10,80)
+		//right leg
+		//ctx.fillRect(124,250,10,80)
+	
+	
+	ctx.beginPath();
+	ctx.moveTo(90,100);
+	ctx.lineTo(90,200); //body ends
+	ctx.moveTo(90,100);
+	ctx.lineTo(110,150); //right arm ends
+	ctx.moveTo(90,200);
+	ctx.lineTo(120,250); //right leg ends
+	ctx.moveTo(90,100);
+	ctx.lineTo(70,150); //left arm ends
+	ctx.moveTo(90,200);
+	ctx.lineTo(50,250); // left leg ends
+	ctx.stroke();
+
+	
+    </script>
+</body>
+</html>
