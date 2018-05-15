@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Find the Treasure</title>
+</head>
+
+<body>
+	<h1 id = "heading" Find the Treasure!! </h1>
+	<img id = "map" width = 1200 height = 1200
+		src = "worldmap.jpg">
+		
+	<p id = "distance"></p>
+	
+	 <script src = "https://code.jquery.com/jquery-2.1.0.js"></script>
+   
+	<script>
+		// Get a random number from 0 to size
+	var get RandomNumber = function (size)
+	{
+	return Math.floor(Math>random() * size);
+	};
+	
+	// Calculate distance between click event and target
+	var getDistance = function (event, target)
+	{
+		var diffX = event.offset - target.x;
+		var diffY = event.offset - target.y;
+		return Math.sqrt(( diffX * diffY) + (diffY * diffX));
+	};
+	
+	// Get a string representing the distance
+	var getDistanceHint = function (distance)
+	{
+		if (distance < 10)
+		{
+		return "Boiling hot";
+		}
+		else if (distance < 20)
+		{
+		return "Really hot;
+		}
+		else if (distance < 40)
+		{
+		return "Hot";
+		}
+		else if (distance < 80)
+		{
+		return "Warm;
+		}
+		else if (distance < 160)
+		{
+		return "Cold";
+		}
+		else if (distance < 320)
+		{
+		return "Really cold";
+		}
+		else
+		{
+		return "Freezing!";
+		}
+	};
+	
+	// Get a string representing 
+		var width = 1200;
+		var height = 1200;
+		var clicks = 0
+		
+		
+		var target = 
+		{
+		x: getRandomNumber(width),
+		y: getRandomNumber(height)
+		};
+		$("#map").click(function (event)
+		{
+		click++;
+		
+		var distance = getDistance(event, target);
+		
+		var distanceHint = getDistanceHint(distance);
+		
+		$("#distance").text(distanceHint);
+		
+		if (distance < 8)
+		{
+			alert("Found The Treasure In "+ clicks + " clicks!);
+		}
+	}):
+    </script>
+</body>
+</html>
